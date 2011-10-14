@@ -12,7 +12,7 @@ namespace WebResources
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var styleUrl = Page.ClientScript.GetWebResourceUrl(this.GetType(), "WebResources.Styles.ResourceStyle.css");
+            var styleUrl = Page.ClientScript.GetWebResourceUrl(typeof(_Default), "WebResources.Styles.ResourceStyle.css");
             Response.Redirect(styleUrl);
         }
     }
