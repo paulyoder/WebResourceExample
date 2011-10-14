@@ -13,10 +13,7 @@ namespace WebResources
         protected void Page_Load(object sender, EventArgs e)
         {
             var styleUrl = Page.ClientScript.GetWebResourceUrl(this.GetType(), "WebResources.Styles.ResourceStyle.css");
-            //var styleUrl = "/Styles/ResourceStyle.css";
-            var attribute = string.Format("<link href='{0}' type='text/css' rel='stylesheet' />", styleUrl);
-            var include = new LiteralControl(attribute);
-            ((System.Web.UI.HtmlControls.HtmlHead)Page.Header).Controls.Add(include);
+            Response.Redirect(styleUrl);
         }
     }
 }
